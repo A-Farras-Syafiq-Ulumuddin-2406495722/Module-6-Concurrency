@@ -13,3 +13,21 @@ Kemudian ketika menghandle request dari browser, terbuatlah method `handle_conne
 
 Milestone ini memodifikasi method `handle_connection()` yang paling terlihat yaitu menampilkan file `hello.html` pada web yang dibuka melalui `localhost`. Jadi didalam method ada 3 variabel baru yaitu `status_line`, `content`, dan `length` yang kemudian disatukan menjadi `response`. Lalu setelah itu `stream.write_all(response.as_bytes()).unwrap();` akan melakukan kerjanya.
 
+# Milestone 3
+
+![Commit 3 screen capture](/assets/images/commit3.png)
+
+Pada milestone ini melakukan validasi request dan melakukan pemilihan pada response-nya. Kita bisa dengan menambahkan `if-else` di method `handle_connection()`. Jadi yang di cek yaitu `request_line` apakah mengandung request line dari GET yang mengandung `/` path. Jika iya, maka akan direspon dengan `hello.html` tetapi jika tidak direspon dengan `bad.html` seperti gambar diatas.
+
+![Commit 3 screen capture code before refactor](/assets/images/beforeRefactor.PNG)
+
+Jika dilihat dari kode modifikasi diatas, kita bisa melihat bahwa terdapat kode duplikat. Kita bisa melakukan refactoring dengan melakukan if-else pada `status_line` dan `file_name` seperti kode dibawah.
+
+![Commit 3 screen capture code after refactor](/assets/images/afterRefactor.PNG)
+
+
+
+
+
+
+
