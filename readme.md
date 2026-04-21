@@ -28,10 +28,12 @@ Jika dilihat dari kode modifikasi diatas, kita bisa melihat bahwa terdapat kode 
 # Milestone 4
 
 Milestone ini melakukan simulasi pada slow request. Jadi caranya yaitu pada kode terdapat `status_line` dan `filename` dimodifikasi yang sebelumnya menggunakan if, sekarang menggunakan match karena ada kasus baru yaitu menambahkan sifat
-`sleep` selama 5 detik. Cara menjalankan simulasinya yaitu dengan membuka dua tab `localhost:7878` dan `localhost:7878/sleep`. Ada dua kemungkinan dan salah satunya yaitu ketika menjalankan `localhost:7878` maka hasilnya akan langsung keluar. Kemungkinan lainnya yaitu dengan menjalankan `localhost:7878/sleep` terlebih dahulu yang hasilnya baru keluar setelah 5 detik, tetapi disaat interval 5 detik itu dan menjalankan `localhost:7878` terjadi hasil yang tidak instan dan yang tanpa `sleep` baru selesai disaat dengan `sleep` selesai.
+`sleep` selama 5 detik. Cara menjalankan simulasinya yaitu dengan membuka dua tab `localhost:7878` dan `localhost:7878/sleep`. Ada dua kemungkinan dan salah satunya yaitu ketika menjalankan `localhost:7878` maka hasilnya akan langsung keluar. Kemungkinan lainnya yaitu dengan menjalankan `localhost:7878/sleep` terlebih dahulu yang hasilnya baru keluar setelah 5 detik, tetapi disaat interval 5 detik itu dan menjalankan `localhost:7878` terjadi bahwa hasil berikut tidak langsung selesai dan beliau baru selesai disaat dengan `localhost:7878/sleep` selesai.
 
+# Milestone 5
 
-
+Pada milestone ini diberikan cara membuat single-thread menjadi multi-thread menggunakan pool thread. Maksud pool thread yaitu membatasi jumlah thread yang dikerjakan secara konkurensi. Milestone ini menggunakan Compile-Driven Development disebabkan cara membuatnya dengan mengecek dengan `cargo check` terus menerus. Sebagai contoh di `main.rs` dimasukkan `Threadpool` tetapi saat di compile terjadi error lalu setelah itu dibuatlah `Threadpool` di dalam `lib.rs`.
+Pada tutorial tanpa disadari ini untuk membiasakan pemula pengguna Rust untuk selalu meng-compile, selain itu juga dikasih tau implementasi alternatif untuk multi-thread ini.
 
 
 
